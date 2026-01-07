@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Космос — Путешествие по Вселенной</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, system-ui, Arial;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Анимированный звёздный фон */
+    .stars {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(1px 1px at 20% 30%, white, transparent),
+        radial-gradient(1px 1px at 80% 20%, white, transparent),
+        radial-gradient(1px 1px at 50% 80%, white, transparent),
+        radial-gradient(2px 2px at 70% 60%, white, transparent),
+        radial-gradient(1px 1px at 10% 90%, white, transparent);
+      background-size: 300px 300px;
+      animation: moveStars 70s linear infinite;
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(-2000px); }
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 34px;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(0,210,255,0.9);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="planets.html">Планеты</a>
+    <a href="gallery.html">Галерея</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Путешествие по космосу</h1>
+  <p>
+    Учебный проект, посвящённый изучению Вселенной, планет,
+    галактик и тайн космоса. Современный дизайн и анимации.
+  </p>
+
+  <div class="buttons">
+    <a href="planets.html">Изучить планеты</a>
+    <a href="gallery.html">Смотреть галерею</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 • Информационный сайт о космосе
+</footer>
+
+</body>
+</html>
